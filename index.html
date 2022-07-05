@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .body{
+            margin: 0%;
+            padding: 0%;
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: right;
+            width: 790px;
+            height: 30px;
+        }
+        div.form{
+            display: flex;
+            justify-content: center;
+        }
+        label{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: larger;
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            box-shadow: none;
+        }
+        input{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+            padding: 5px;
+            border-style:solid;
+            font-size:medium;
+        }
+        select{
+            width: 225px;
+            height: 25px;
+            border-width: 2px;
+            border-radius:5px;
+            border-style:solid;
+        }
+        .button{    
+            display: flex;
+            width: 500px;
+            height: 100px;
+            justify-content: center;
+        }  
+        .btn{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+            padding: 5px;
+            height: 50px;
+            width:150px;
+            border-style:solid;
+            font-size:larger;
+            background-color: darkmagenta;
+            color:aliceblue;
+
+        }
+    </style>
+</head>
+<body>
+        <h1>Grill View Point</h1>
+        <h3>A Start up viewer</h3>
+        <div class = "form">
+            <form>
+                <label for=" email">Email</label>
+                &nbsp;&nbsp;
+                <input type ="text" name="email" class="email" placeholder="Please enter mail"><br><br><br>
+                <label for="password">Password</label>
+                &nbsp;&nbsp;
+                <input type ="password" name="password" class="password" placeholder="Please enter password"><br><br><br>
+                <label for="profession">Profession</label>
+                &nbsp;&nbsp;
+                <input type ="text" name="profession" class="profession" placeholder="Please enter your job"><br><br><br>
+                <label for="age">Age</label>
+                &nbsp;&nbsp;
+                <select name="age" id="age" >
+                    <option value="number">1</option>
+                    <option value="number">2</option>
+                    <option value="number">3</option>
+                    <option value="number">4</option>
+                    <option value="number">5</option>
+                    <option value="number">6</option>
+                    <option value="number">7</option>
+                    <option value="number">8</option>
+                    <option value="number">10</option>
+                    <option value="number">11</option>
+                    <option value="number">12</option>
+                    <option value="number">13</option>
+                    <option value="number">14</option>
+                    <option value="number">15</option>
+                    <option value="number">16</option>
+                    <option value="number">17</option>
+                    <option value="number">18</option>
+                    <option value="number">19</option>
+                    <option value="number">20</option>
+                    <option value="number">21</option>
+                    <option value="number">22</option>
+                    <option value="number">23</option>
+                    <option value="number">24</option>
+                    <option value="number">25</option>
+                    <option value="number">26</option>
+                    <option value="number">27</option>
+                    <option value="number">28</option>
+                    <option value="number">29</option>
+                    <option value="number">30</option>
+                    <option value="number">31</option>
+                    <option value="number">32</option>
+                    <option value="number">33</option>
+                    <option value="number">34</option>
+                    <option value="number">35</option>
+                    <option value="number">36</option>
+                    <option value="number">37</option>
+                    <option value="number">38</option>
+                    <option value="number">39</option>
+                    <option value="number">40</option>
+                </select><br><br><br><br>
+                <div class="button">
+                    <button type="submit" class="btn">Submit</button>
+                  </div>
+            </form>
+        </div>
+</body>
+</html>
