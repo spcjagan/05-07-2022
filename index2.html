@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        body{
+            margin:0%;
+            padding: 0%;
+        }
+         h1{
+            text-align: center;
+            color: black ;
+         }
+         h2{
+            color:darkmagenta;
+            text-align:left;
+            margin:20px;
+            margin-top: 0px;
+        }
+        .flexbox{
+            display: flex;
+            justify-content:left;
+            align-items: center;
+        }
+        .box1{
+            background-color: blueviolet;
+            margin:20px;
+            margin-top: 0px;
+            padding:20px;
+            height:100px;
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 30px;
+        }
+        .box2{
+            background-color: rgb(226, 43, 165);
+            margin:20px;
+            margin-top: 0px;
+            padding: 20px;
+            height:100px;
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 30px;
+        }
+        .box3{
+            background-color: rgb(43, 226, 73);
+            margin:20px;
+            margin-top: 0px;
+            padding: 20px;
+            height:100px;
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 30px;
+        }
+        .table{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th{
+           border: 3px solid rgb(7, 7, 7);
+           padding: 0.5rem;
+           font-weight: 900;
+           text-align: left;
+           font-family: 'Courier New', Courier, monospace;
+        }
+
+        td {
+           border: 3px solid rgb(7, 7, 7);
+           padding: 0.5rem;
+           text-align: left;
+           font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Details </h1>
+    <h2>Charters</h2>
+    <div class="flexbox">
+        <div class="box1">
+            <p>And then you can see the number of users if you move the mouse into the chart</p>
+        </div>
+      
+        <div class="box2">
+            <p>And then you can see the number of users if you move the mouse into the chart</p>
+        </div>
+      <div class="box3">
+        <p>And then you can see the number of users if you move the mouse into the chart</p>
+      </div>
+    </div>
+    <h2>User Details</h2>
+    <div class="table">
+        <table style="width: 60%; margin:30px; margin-top: 0%; padding:0px;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Profession</th>
+                    <th>Place</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Jagan</td>
+                <td>21</td>
+                <td>SE</td>
+                <td>Pulivendula</td>
+            </tr>
+            <tr>
+                <td>Vamsi</td>
+                <td>19</td>
+                <td>SE</td>
+                <td>Bengaluru</td>
+            </tr>
+            <tr>
+                <td>Ashok</td>
+                <td>34</td>
+                <td>SSE</td>
+                <td>Bengaluru</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
