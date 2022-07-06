@@ -7,23 +7,36 @@
     <title>Sample Page</title>
     <style>
         body{
-            margin:0%;
-            padding: 0%;
+            margin:10px;
+            padding: 10px;
         }
          h1{
             text-align: center;
-            font-size: 50px;
+            font-size: 70px;
             color: black ;
          }
          h2{
             color:darkmagenta;
-            text-align:left;
+            text-align:center;
             margin:20px;
+            margin-right: 700px;
             margin-top: 0px;
+        }
+        #charters{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+        }
+        #userdetails{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
         }
         .flexbox{
             display: flex;
-            justify-content:left;
+            justify-content:center;
             align-items: center;
         }
         .box1{
@@ -58,7 +71,7 @@
         }
         .table{
             display: flex;
-            justify-content: left;
+            justify-content: center;
             align-items: left;
 
         }
@@ -70,20 +83,24 @@
            padding: 0.5rem;
            font-weight: 900;
            text-align: left;
-           font-family: 'Courier New', Courier, monospace;
+           width:50px;
+           font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         td {
            border: 3px solid rgb(7, 7, 7);
            padding: 0.5rem;
+           width:50px;
            text-align: left;
-           font-family: 'Courier New', Courier, monospace;
+           font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     </style>
 </head>
 <body>
     <h1>Data Details </h1>
+    <div id="charters">
     <h2>Charters</h2>
+    </div>
     <div class="flexbox">
         <div class="box1">
             <p>And then you can see the number of users if you move the mouse into the chart</p>
@@ -96,7 +113,9 @@
         <p>And then you can see the number of users if you move the mouse into the chart</p>
       </div>
     </div>
+    <div id="userdetails">
     <h2>User Details</h2>
+    </div>
     <div class="table">
         <table style="width: 60%; margin:30px; margin-top: 0%; padding:0px;">
             <thead>
