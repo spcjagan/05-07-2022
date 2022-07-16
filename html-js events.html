@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <style>
+        button {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid green;
+            border-radius: 5px;
+            box-shadow:3px 3px 3px 3px green;
+        }
+        select {
+            outline: none;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid green;
+            border-radius: 5px;
+            box-shadow:3px 3px 3px 3px green;
+        }
+
+        .select-element.error {
+            border:2px solid red;
+            box-shadow:3px 3px 3px 3px red;
+
+        }
+        .input-error {
+            display: none;
+            color: red;
+        }
+        .input-element {
+            border: 2px solid green;
+            margin: 10px;
+            padding: 10px;
+            outline: none;
+            border-radius: 5px;
+            box-shadow:3px 3px 3px 3px green;
+        }
+
+        .input-element.error {
+            border: 2px solid red;
+            box-shadow:3px 3px 3px 3px red;
+        }
+
+        .input-element.error ~ .input-error {
+            display: inline;
+        }
+
+    </style>
+    <!-- <script src='main.js'></script> -->
+    <script type="text/javascript">
+        // console.log("Sum of 1, 2: ", sum(1, 2))
+        // console.log('Hi from head. Button element:', document.getElementById('saveBtn'));
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input class="input-element" type="text" id="inputName" placeholder="First name"/>
+        <span class="input-error">Please input first name</span>
+    </div>
+    <div class="container">
+        <select id="dob" class="select-element">
+            <option value="">Please select age</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+    </div>
+    <div class="container">
+        <input class="input-element" type="text" id="inputNameTwo" placeholder="Last name"/>
+        <span class="input-error">Please input last name</span>
+    </div>
+    <div class="container">
+        <button id="saveBtn" onclick="saveButtonClick()">Save</button>
+    </div>
+    <script type="text/javascript">        
+
+        // console.log('Hi from body. Button element:', document.getElementById('saveBtn'));
+
+        // Button events
+        // function saveButtonClick() {
+        //     const element = document.getElementById("inputName");
+        //     const elementValue = element.value;
+        //     console.log('saveButtonClick function :', elementValue);
+        // }
+        const buttonElement = document.getElementById("saveBtn");
+        buttonElement.addEventListener("click", function(event){
+            console.log('Buton cllicked');
+        });
+
+        /**
+         * Input events
+         */
+        const inputElement = document.getElementById("inputName");
+        // inputElement.addEventListener("input", function(){
+        // })
+        inputElement.addEventListener("input", (event) => {
+            console.log('input handler', event.target.value)
+            const value = event.target.value;
+            if (value) {
+                event.target.classList.remove('error');
+            }
+        });
+
+        inputElement.addEventListener("blur", (event) => {
+            console.log('blur handler');
+            const value = event.target.value;
+            if (!value) {
+                event.target.classList.add('error');
+            } else {
+                event.target.classList.remove('error');
+            }
+        });
+
+        const selectElement = document.getElementById("dob");
+        selectElement.addEventListener("change",(event) => {
+            console.log("changeHandler");
+        const value = event.target.value;
+            if(!value){
+                event.target.classList.add("error");
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -9,6 +9,7 @@
         .body{
             margin: 0%;
             padding: 0%;
+
         }
         h1{
             text-align: center;
@@ -36,7 +37,7 @@
             box-shadow: none;
         }
         input{
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             border-radius: 5px;
             box-shadow: 5px 5px royalblue;
             padding: 10px;
@@ -58,7 +59,7 @@
             height: 100px;
             justify-content: center;
         }  
-        .btn{
+        #btn{
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             border-radius: 30px;
             box-shadow:2px 5px  black;
@@ -81,16 +82,17 @@
             <form>
                 <label for=" email">Email</label>
                 &nbsp;&nbsp;
-                <input type ="text" name="email" class="email" placeholder="Please enter mail"><br><br><br>
+                <input type ="text" name="email" id="email" value=""  placeholder="Please enter mail"><br><br><br>
                 <label for="password">Password</label>
                 &nbsp;&nbsp;
-                <input type ="password" name="password" class="password" placeholder="Please enter password"><br><br><br>
+                <input type ="password" name="password" id="password" value="" placeholder="Please enter password" value=""><br><br><br>
                 <label for="profession">Profession</label>
                 &nbsp;&nbsp;
-                <input type ="text" name="profession" class="profession" placeholder="Please enter your job"><br><br><br>
+                <input type ="text" name="profession" id ="prof" value placeholder="Please enter your job" value=""><br><br><br>
                 <label for="age">Age</label>
                 &nbsp;&nbsp;
                 <select name="age" id="age" >
+                    <option value>Please select Age</option>
                     <option value="number">1</option>
                     <option value="number">2</option>
                     <option value="number">3</option>
@@ -132,9 +134,30 @@
                     <option value="number">40</option>
                 </select><br><br><br><br>
                 <div class="button">
-                    <button type="submit" class="btn">Submit</button>
+                    <button id="btn" >Submit</button>
                   </div>
             </form>
         </div>
+        <script>
+            let data=[];
+            const updateValues  = (e)=>{
+                e.preventDefault();
+                let names={
+                    email:document.getElementById("email").value,
+                    password:document.getElementById("password").value,
+                    profession:document.getElementById("prof").value
+                }
+                data.push(names);
+                document.forms[0].reset();
+
+                console.warn('added' , {data} );
+                let pre = document.querySelector('#msg pre');
+                pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+            }
+            document.addEventListener('DOMContentLoaded',()=>{
+                document.getElementById('btn').addEventListener('click',updateValues);
+            });
+
+        </script>
 </body>
 </html>
