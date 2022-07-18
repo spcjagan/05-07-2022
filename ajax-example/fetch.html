@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script> -->
+</head>
+
+<body>
+
+  <div>
+    <div>Results:</div>
+    <div>
+      Student Id: <span id="studentId"></span>
+    </div>
+    <div>
+      Stundent Name: <span id="studentTitle"></span>
+    </div>
+  </div>
+
+  <script>
+
+    // XMLHttpRequest
+    /**
+     * Web service - 
+     *    There 2 protocals 
+     *    SOAP - XML response only - Outdated (Old)
+     *    REST - XML and JSON response - Current industry using this type
+     * GET - when you want get the datea from server 
+     * POST - when you want to save the data in server 
+     * PUT - when you want to update the data in server 
+     * DELETE - when you want to delete the data 
+     * */
+
+     /**
+      * Documentation: 
+      * URL : https://jsonplaceholder.typicode.com/todos/2
+      * method: GET
+      * Sample resonse: 
+      * {
+          "userId": 1,
+          "id": 1,
+          "title": "delectus aut autem",
+          "completed": false
+        }
+      * 
+      * 
+      * */
+    /**
+     * Ajax - Asynchronous JavaScript
+     */
+
+    console.log('1.00000000');
+    let studentId = '';
+
+    // Promise: output of an Asynchronous operation. 
+
+    fetch("https://jsonplaceholder.typicode.com/todos/2", {
+      // You can pass method type, request body, headers 
+      method: 'GET'
+    })
+      .then((response) => response.json())
+      .then((jagan) => {
+        
+        studentId = jagan.id; 
+
+        const idElement = document.getElementById("studentId");
+        idElement.innerHTML = jagan.id;
+
+        const titleElement = document.getElementById("studentTitle");
+        titleElement.innerHTML = jagan.title;
+
+        console.log('Inside fetch: ', studentId)    
+
+      });
+
+      console.log('Student ID :', studentId)
+
+  </script>
+
+</body>
+
+</html>

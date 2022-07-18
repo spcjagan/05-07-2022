@@ -8,19 +8,32 @@
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <style>
         button {
-            padding: 10px;
+            padding: 10px 50px 10px 50px;
             margin: 10px;
-            border: 2px solid green;
+            font-size: medium;
+            font-weight: 1000;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 2px solid blueviolet;
             border-radius: 5px;
-            box-shadow:3px 3px 3px 3px green;
+            box-shadow:3px 3px 3px 3px blueviolet;
         }
+
+        button:hover{
+            background-color:#be156a;
+            transition: 0.7s;
+        }
+
         select {
             outline: none;
             margin: 10px;
             padding: 10px;
-            border: 2px solid green;
+            border: 2px solid blueviolet;
             border-radius: 5px;
-            box-shadow:3px 3px 3px 3px green;
+            box-shadow:3px 3px 3px 3px blueviolet;
+        }
+
+        h3{
+            margin:10px;
         }
 
         .select-element.error {
@@ -33,12 +46,12 @@
             color: red;
         }
         .input-element {
-            border: 2px solid green;
+            border: 2px solid blueviolet;
             margin: 10px;
             padding: 10px;
             outline: none;
             border-radius: 5px;
-            box-shadow:3px 3px 3px 3px green;
+            box-shadow:3px 3px 3px 3px blueviolet;
         }
 
         .input-element.error {
@@ -48,6 +61,23 @@
 
         .input-element.error ~ .input-error {
             display: inline;
+        }
+
+        #checkbox-element{
+            margin: 5px;
+            padding:5px;
+        }
+         
+        .cbe.error{
+            border: 2px solid red;
+            box-shadow:3px 3px 3px 3px red;
+
+        }
+
+        #checkboxId {
+            margin:5px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 2px 2px blueviolet;
         }
 
     </style>
@@ -74,6 +104,25 @@
     <div class="container">
         <input class="input-element" type="text" id="inputNameTwo" placeholder="Last name"/>
         <span class="input-error">Please input last name</span>
+    </div>
+    <div class ="container">
+        <h3>Known skills</h5>
+        <form id ="checkbox-element" class="cbe">
+        <input type = "checkbox" id="checkboxId"/>
+        <label>C</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>C++</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>Core Java</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>HTML</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>CSS</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>Javascript</label><br/>
+        <input type = "checkbox" id="checkboxId"/>
+        <label>Python</label><br/>
+        </form>
     </div>
     <div class="container">
         <button id="saveBtn" onclick="saveButtonClick()">Save</button>
@@ -123,7 +172,18 @@
         const value = event.target.value;
             if(!value){
                 event.target.classList.add("error");
+            }else {
+                event.target.classList.remove("error");
             }
+        });
+
+        const checkboxElement =document.getElementById("checkboxId");
+        checkboxElement.addEventListener("click", (event) => {
+            console.log("clicked");
+        const value = event.target.value;
+        if(checkboxElement.checked == true){
+            alert("checkbox selected");
+        }
         })
         
     </script>
